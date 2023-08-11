@@ -176,6 +176,16 @@ body {
       -webkit-appearance: none;
       -moz-appearance: none;
       text-align: center;
+      option {
+        background-color: #fff;
+        color: #000;
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible {
+          background-color: #ddd;
+        }
+      }
     }
   }
 }

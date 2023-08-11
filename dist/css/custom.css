@@ -150,4 +150,11 @@ body #tax_year #tax-year {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-align: center;
+}
+body #tax_year #tax-year option {
+  background-color: #fff;
+  color: #000;
+}
+body #tax_year #tax-year option:hover, body #tax_year #tax-year option:active, body #tax_year #tax-year option:focus, body #tax_year #tax-year option:focus-visible {
+  background-color: #ddd;
 }/*# sourceMappingURL=custom.css.map */
