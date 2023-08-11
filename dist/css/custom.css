@@ -1,0 +1,153 @@
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-xs {
+  width: 50px;
+}
+
+.image-sm {
+  width: 80px;
+}
+
+.image-md {
+  width: 100px;
+}
+
+body.register-page ul li::marker {
+  color: #00cc71;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 20px;
+}
+body .info-list li:not(:last-child) {
+  margin-block: 6px;
+}
+body .info-list li .circle-yes {
+  width: 20px;
+  margin-right: 5px;
+  display: inline-block;
+}
+body .first-step .form-group {
+  position: relative;
+}
+body .first-step .form-group::before {
+  content: "";
+  position: absolute;
+  background-color: #0087ee;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+body .first-step .form-group.active::before {
+  width: 100%;
+}
+body .grid-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+@media (min-width: 786px) {
+  body .grid-boxes {
+    gap: 100px;
+  }
+}
+@media (max-width: 599px) {
+  body .grid-boxes {
+    gap: 75px;
+  }
+}
+body .grid-boxes a {
+  color: #464646;
+}
+body .grid-boxes a .box {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  min-height: 150px;
+}
+body .grid-boxes a .box .logo {
+  background-color: rgba(240, 128, 128, 0.1);
+  border: 2px solid #ddd;
+  box-shadow: 0 0 3px 5px #eee;
+  border-radius: 8px;
+}
+body .grid-boxes a .box .logo img {
+  width: 80px;
+}
+body .grid-boxes a .box h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+body .grid-boxes a:hover .box .logo {
+  background-color: rgba(238, 238, 238, 0.1);
+}
+body .top-heading {
+  position: relative;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-bottom: 2px solid #0087ee;
+}
+body .top-heading .small-img {
+  width: 50px;
+  display: inline-block;
+}
+@media (min-width: 786px) {
+  body .top-heading .small-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+  }
+}
+body #tax_year > div {
+  position: relative;
+}
+body #tax_year > div::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  top: 50%;
+  right: 120px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+@media (max-width: 360px) {
+  body #tax_year > div::after {
+    right: 100px;
+  }
+}
+body #tax_year #tax-year {
+  border: 1px solid #0087ee;
+  background-color: #0087ee;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+}/*# sourceMappingURL=custom.css.map */
