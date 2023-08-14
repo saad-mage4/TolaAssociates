@@ -41,7 +41,7 @@ include_once 'includes/aside.php';
       <!-- Main row -->
       <div class="row">
         <div class="col-12 text-center mb-3">
-          <h3 class="h1 font-weight-bold">Good evening! Welcome to <?=$title?></h3>
+          <h3 class="h1 font-weight-bold">Good evening! Welcome to <?= $title ?></h3>
         </div>
         <div class="col-12">
           <div class="row">
@@ -106,6 +106,33 @@ include_once 'includes/aside.php';
                 </div>
               </a>
 
+              <a href="#!" id="ntn-finder">
+                <div class="box">
+                  <div class="logo">
+                    <img src="img/ntn_finder.png" alt="logo_img">
+                  </div>
+                  <h4>NTN Finder</h4>
+                </div>
+              </a>
+
+              <a href="#!" id="atl-finder">
+                <div class="box">
+                  <div class="logo">
+                    <img src="img/atl_status_finder.png" alt="logo_img">
+                  </div>
+                  <h4>ATL Status Finder</h4>
+                </div>
+              </a>
+
+              <a href="#!" id="business-incorporation">
+                <div class="box">
+                  <div class="logo">
+                    <img src="img/business_services.png" alt="logo_img">
+                  </div>
+                  <h4>Business Incorporation</h4>
+                </div>
+              </a>
+
               <a href="#!">
                 <div class="box">
                   <div class="logo">
@@ -115,40 +142,12 @@ include_once 'includes/aside.php';
                 </div>
               </a>
 
-
-              <a href="#!">
-                <div class="box">
-                  <div class="logo">
-                    <img src="img/ntn_finder.png" alt="logo_img">
-                  </div>
-                  <h4>NTN Finder</h4>
-                </div>
-              </a>
-
-              <a href="#!">
-                <div class="box">
-                  <div class="logo">
-                    <img src="img/atl_status_finder.png" alt="logo_img">
-                  </div>
-                  <h4>ATL Status Finder</h4>
-                </div>
-              </a>
-
               <a href="#!">
                 <div class="box">
                   <div class="logo">
                     <img src="img/iris_profile_update.png" alt="logo_img">
                   </div>
                   <h4>IRIS Profile Update</h4>
-                </div>
-              </a>
-
-              <a href="#!">
-                <div class="box">
-                  <div class="logo">
-                    <img src="img/business_services.png" alt="logo_img">
-                  </div>
-                  <h4>Business Incorporation</h4>
                 </div>
               </a>
 

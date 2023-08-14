@@ -42,4 +42,37 @@ $(document).ready(function () {
       },
     });
   });
+
+  $("#ntn-finder").on("click", function (e) {
+    e.preventDefault();
+    $('[data-container="2"]').addClass("d-none");
+    $.ajax({
+      url: "./ajax/ntn-finder.php",
+      success: function (result) {
+        $(".render-data").html(result);
+      },
+    });
+  });
+
+  $("#atl-finder").on("click", function (e) {
+    e.preventDefault();
+    $('[data-container="2"]').addClass("d-none");
+    $.ajax({
+      url: "./ajax/atl-finder.php",
+      success: function (result) {
+        $(".render-data").html(result);
+      },
+    });
+  });
+
+  $("#business-incorporation").on("click", function (e) {
+    e.preventDefault();
+    $('[data-container="2"]').addClass("d-none");
+    $.ajax({
+      url: "./ajax/business-incorporation.php",
+      success: function (result) {
+        $(".render-data").html(result);
+      },
+    });
+  });
 });
