@@ -158,7 +158,7 @@ body {
         color: #fff;
         top: 50%;
         right: 120px;
-        @include responsive('sm'){
+        @include responsive("sm") {
           right: 100px;
         }
         position: absolute;
@@ -186,6 +186,56 @@ body {
           background-color: #ddd;
         }
       }
+    }
+  }
+
+  // tax-filing page css
+  .nationality,
+  .residential,
+  .stay-in-pak {
+    > * {
+      flex: 1 0 auto;
+    }
+    @include responsive("mobile") {
+      flex-direction: column;
+    }
+    span {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .group {
+      display: flex;
+      align-items: center;
+      flex-flow: row-reverse;
+      column-gap: 10px;
+      @include responsive("mobile") {
+        justify-content: flex-end;
+      }
+      label,
+      input {
+        margin: 0;
+      }
+      input {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #ddd;
+        border-color: #ddd;
+        &:checked {
+          background: #dc3545;
+          border-color: #dc3545;
+        }
+      }
+      label {
+        font-size: 20px;
+      }
+    }
+  }
+  .stay-in-pak {
+    .group {
+      justify-content: flex-end;
     }
   }
 }

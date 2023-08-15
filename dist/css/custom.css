@@ -157,4 +157,72 @@ body #tax_year #tax-year option {
 }
 body #tax_year #tax-year option:hover, body #tax_year #tax-year option:active, body #tax_year #tax-year option:focus, body #tax_year #tax-year option:focus-visible {
   background-color: #ddd;
+}
+body .nationality > *,
+body .residential > *,
+body .stay-in-pak > * {
+  flex: 1 0 auto;
+}
+@media (max-width: 599px) {
+  body .nationality,
+  body .residential,
+  body .stay-in-pak {
+    flex-direction: column;
+  }
+}
+body .nationality span,
+body .residential span,
+body .stay-in-pak span {
+  font-size: 22px;
+  font-weight: bold;
+}
+body .nationality .group,
+body .residential .group,
+body .stay-in-pak .group {
+  display: flex;
+  align-items: center;
+  flex-flow: row-reverse;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media (max-width: 599px) {
+  body .nationality .group,
+  body .residential .group,
+  body .stay-in-pak .group {
+    justify-content: flex-end;
+  }
+}
+body .nationality .group label,
+body .nationality .group input,
+body .residential .group label,
+body .residential .group input,
+body .stay-in-pak .group label,
+body .stay-in-pak .group input {
+  margin: 0;
+}
+body .nationality .group input,
+body .residential .group input,
+body .stay-in-pak .group input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #ddd;
+  border-color: #ddd;
+}
+body .nationality .group input:checked,
+body .residential .group input:checked,
+body .stay-in-pak .group input:checked {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+body .nationality .group label,
+body .residential .group label,
+body .stay-in-pak .group label {
+  font-size: 20px;
+}
+body .stay-in-pak .group {
+  justify-content: flex-end;
 }/*# sourceMappingURL=custom.css.map */
