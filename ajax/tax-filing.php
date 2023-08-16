@@ -216,8 +216,11 @@
 
                 </div>
             </div>
-            <div class="col-lg-12 text-right mb-5">
-                <button class="btn btn-danger btn-step-2">Continue</button>
+            <div class="col-lg-6 mb-5">
+                <button class="btn font-weight-bold btn-primary btn-stepBack-1">back</button>
+            </div>
+            <div class="col-lg-6 text-right mb-5">
+                <button class="btn font-weight-bold btn-danger btn-step-2">Continue</button>
             </div>
         </div>
     </div>
@@ -268,6 +271,12 @@
             e.preventDefault();
             $('.sec-1').addClass('d-none');
             $('.sec-2').removeClass('d-none');
+        });
+
+        $('.btn-stepBack-1').on('click', function(e) {
+            e.preventDefault();
+            $('.sec-2').addClass('d-none');
+            $('.sec-1').removeClass('d-none');
         });
 
     });
