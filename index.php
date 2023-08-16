@@ -45,7 +45,7 @@ include_once 'includes/aside.php';
         </div>
         <div class="col-12">
           <div class="row">
-            <div class="col-lg-7 col-md-12 mx-auto">
+            <div class="col-lg-8 col-md-12 mx-auto">
               <div class="top-heading d-flex flex-column align-items-center border border-2 rounded border-danger p-3">
                 <h3 class="font-weight-bold">Your account has been successfully created.</h3>
                 <h5 class="font-weight-bold">Few things for your information</h5>

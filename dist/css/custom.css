@@ -20,15 +20,20 @@ img {
 }
 
 .image-xs {
-  width: 50px;
+  width: 50px !important;
 }
 
 .image-sm {
-  width: 80px;
+  width: 80px !important;
 }
 
 .image-md {
-  width: 100px;
+  width: 100px !important;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 body.register-page ul li::marker {
@@ -101,6 +106,10 @@ body .grid-boxes a .box h4 {
 }
 body .grid-boxes a:hover .box .logo {
   background-color: rgba(238, 238, 238, 0.1);
+}
+body .grid-boxes.no-gap {
+  gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 body .top-heading {
   position: relative;

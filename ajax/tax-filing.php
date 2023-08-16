@@ -29,101 +29,195 @@
     </div>
 </div>
 <form id="tex-filing-form" data-form="tax-filing-step-1" class="first-step d-none">
-    <div class="row">
-        <div class="col-12">
-            <img src="./img/card.png" class="image-xs mx-auto d-block" alt="card">
-            <h3 class="text-center mb-2">{Username}, this is your last filled <strong>Personal Information</strong></h3>
-            <p class="text-center text-muted">you can update your information for this year</p>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input class="form-control" type="text" name="fullName" id="fullName">
+    <div class="sec-1">
+        <div class="row">
+            <div class="col-12">
+                <img src="./img/card.png" class="image-xs mx-auto d-block" alt="card">
+                <h3 class="text-center mb-2">{Username}, this is your last filled <strong>Personal Information</strong></h3>
+                <p class="text-center text-muted">you can update your information for this year</p>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="dob">Date Of Birth</label>
-                <input class="form-control" type="date" name="dob" id="dob">
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="cnicNo">CNIC No.</label>
-                <input class="form-control" type="text" name="cnicNo" id="cnicNo">
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="occupation">Occupation</label>
-                <input class="form-control" type="text" name="occupation" id="occupation">
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" id="email">
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="form-group">
-                <label for="phone">Mobile No.</label>
-                <input class="form-control" type="text" name="phone" id="phone">
-            </div>
-        </div>
-        <div class="col-lg-6 ml-lg-0 mb-3 ml-2">
-            <div class="nationality d-flex justify-content-between align-content-center">
-                <span>Nationality</span>
-                <div class="group">
-                    <label for="pakistani">Pakistani</label>
-                    <input type="radio" name="nationality" value="pakistani" checked id="pakistani">
-                </div>
-                <div class="group">
-                    <label for="foreigner">Foreigner</label>
-                    <input type="radio" name="nationality" value="foreigner" id="foreigner">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input class="form-control" type="text" name="fullName" id="fullName">
                 </div>
             </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="dob">Date Of Birth</label>
+                    <input class="form-control" type="date" name="dob" id="dob">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="cnicNo">CNIC No.</label>
+                    <input class="form-control" type="text" name="cnicNo" id="cnicNo">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="occupation">Occupation</label>
+                    <input class="form-control" type="text" name="occupation" id="occupation">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="phone">Mobile No.</label>
+                    <input class="form-control" type="text" name="phone" id="phone">
+                </div>
+            </div>
+            <div class="col-lg-6 ml-lg-0 mb-3 ml-2">
+                <div class="nationality d-flex justify-content-between align-content-center">
+                    <span>Nationality</span>
+                    <div class="group">
+                        <label for="pakistani">Pakistani</label>
+                        <input type="radio" name="nationality" value="pakistani" checked id="pakistani">
+                    </div>
+                    <div class="group">
+                        <label for="foreigner">Foreigner</label>
+                        <input type="radio" name="nationality" value="foreigner" id="foreigner">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6 ml-lg-0 mb-3 ml-2">
+                <div class="residential d-flex justify-content-between align-content-center">
+                    <span>Residential status</span>
+                    <div class="group">
+                        <label for="resident">Resident</label>
+                        <input type="radio" checked name="residential" id="resident">
+                    </div>
+                    <div class="group">
+                        <label for="non-resident">Non-Resident</label>
+                        <input type="radio" name="residential" id="non-resident">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6"></div>
-        <div class="col-lg-6 ml-lg-0 mb-3 ml-2">
-            <div class="residential d-flex justify-content-between align-content-center">
-                <span>Residential status</span>
-                <div class="group">
-                    <label for="resident">Resident</label>
-                    <input type="radio" checked name="residential" id="resident">
+        <div class="row extra-options d-none">
+            <div class="col-lg-12 ml-lg-0 mb-3 ml-2">
+                <div class="stay-in-pak">
+                    <span>Is your stay in Pakistan solely because of your employment?</span>
+                    <div class="group">
+                        <label for="yes-1">Yes</label>
+                        <input type="radio" checked name="residential" id="yes-1">
+                    </div>
+                    <div class="group">
+                        <label for="no-1">No</label>
+                        <input type="radio" name="residential" id="no-1">
+                    </div>
                 </div>
-                <div class="group">
-                    <label for="non-resident">Non-Resident</label>
-                    <input type="radio" name="residential" id="non-resident">
+            </div>
+            <div class="col-lg-12 ml-lg-0 mb-3 ml-2">
+                <div class="stay-in-pak">
+                    <span>Was your stay in Pakistan as of June 30, 2023 more than 3 years?</span>
+                    <div class="group">
+                        <label for="yes-2">Yes</label>
+                        <input type="radio" checked name="stay" id="yes-2">
+                    </div>
+                    <div class="group">
+                        <label for="no-2">No</label>
+                        <input type="radio" name="stay" id="no-2">
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="row my-5 step-2-container">
+            <div class="col-lg-12 text-right mb-5">
+                <button class="btn btn-danger btn-step-2">Continue</button>
             </div>
         </div>
     </div>
-    <div class="row extra-options d-none">
-        <div class="col-lg-12 ml-lg-0 mb-3 ml-2">
-            <div class="stay-in-pak">
-                <span>Is your stay in Pakistan solely because of your employment?</span>
-                <div class="group">
-                    <label for="yes-1">Yes</label>
-                    <input type="radio" checked name="residential" id="yes-1">
-                </div>
-                <div class="group">
-                    <label for="no-1">No</label>
-                    <input type="radio" name="residential" id="no-1">
+    <div class="sec-2 d-none">
+        <div class="row income-section">
+            <div class="col-12 text-center mb-3">
+                <h3>Now let's start <strong>Looking at your Income</strong></h3>
+                <p class="text-muted">Select the sources of your income, you can select more than one if applicable</p>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <div class="grid-boxes no-gap">
+
+                    <a href="#!">
+                        <div class="box">
+                            <div class="logo p-3">
+                                <img class="image-xs" src="img/salary.png" alt="logo_img">
+                            </div>
+                            <h4>Salary</h4>
+                        </div>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/business.png" alt="logo_img">
+                                </div>
+                                <h4>Business / Self Employed</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/freelancer.png" alt="logo_img">
+                                </div>
+                                <h4>Freelancer</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/professional.png" alt="logo_img">
+                                </div>
+                                <h4>Professional</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/pensioner.png" alt="logo_img">
+                                </div>
+                                <h4>Pensioner</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/agriculture.png" alt="logo_img">
+                                </div>
+                                <h4>Agriculture</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/commission.png" alt="logo_img">
+                                </div>
+                                <h4>Commission/Services</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!">
+                            <div class="box">
+                                <div class="logo p-3">
+                                    <img class="image-xs" src="img/aop.png" alt="logo_img">
+                                </div>
+                                <h4>Partnership/AOP</h4>
+                            </div>
+                        </a>
+
                 </div>
             </div>
-        </div>
-        <div class="col-lg-12 ml-lg-0 mb-3 ml-2">
-            <div class="stay-in-pak">
-                <span>Was your stay in Pakistan as of June 30, 2023 more than 3 years?</span>
-                <div class="group">
-                    <label for="yes-2">Yes</label>
-                    <input type="radio" checked name="stay" id="yes-2">
-                </div>
-                <div class="group">
-                    <label for="no-2">No</label>
-                    <input type="radio" name="stay" id="no-2">
-                </div>
+            <div class="col-lg-12 text-right mb-5">
+                <button class="btn btn-danger btn-step-2">Continue</button>
             </div>
         </div>
     </div>
@@ -142,7 +236,8 @@
             let val = $(this).find('option:selected').val();
             $('[data-container="tax-filing"]').hide();
             $('[data-form="tax-filing-step-1"]').removeClass('d-none');
-            console.log(val);
+            $('.year-selected').html('YEAR: ' + val);
+            $('.tax-filing-sec, .step-2-container').removeClass('d-none');
         });
 
         // input focus work start
@@ -166,6 +261,13 @@
             } else {
                 $('.extra-options').addClass('d-none');
             }
+        });
+
+        // btn-step-2
+        $('.btn-step-2').on('click', function(e) {
+            e.preventDefault();
+            $('.sec-1').addClass('d-none');
+            $('.sec-2').removeClass('d-none');
         });
 
     });

@@ -35,13 +35,22 @@ img {
 }
 
 .image-xs {
-  width: 50px;
+  width: 50px !important;
 }
 .image-sm {
-  width: 80px;
+  width: 80px !important;
 }
 .image-md {
-  width: 100px;
+  width: 100px !important;
+}
+
+.nav-pills {
+  .nav-link {
+    &:not(.active):hover {
+      background-color: rgba($color: #fff, $alpha: 0.1);
+      color: #fff;
+    }
+  }
 }
 
 body {
@@ -128,6 +137,10 @@ body {
           }
         }
       }
+    }
+    &.no-gap {
+      gap: 0;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
 

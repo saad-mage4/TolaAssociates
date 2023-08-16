@@ -36,59 +36,63 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="./index.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Dashboard</p>
+                <a href="./index.php?demo=yes" class="nav-link">
+                <i class="far fa-circle text-danger nav-icon"></i>
+                <p class="year-selected"></p>
                 </a>
             </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                Level 1
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
-            </a>
-          </li>
+            <span class="tax-filing-sec d-none">
+            <span class="text-muted">INCOME TAX</span>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>TAXABLE INCOME</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>TAX CHARGE</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>TAX PAID</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>PAYABLE</span>
+                <p>0</p>
+              </a>
+            </li>
+            <span class="text-muted">WEALTH RECONCILIATION</span>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>INCOME</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>TAX PAID</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>CLOSING WEALTH</span>
+                <p>0</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#!" class="nav-link d-flex align-items-center justify-content-between">
+                <span>DIFFERENCE</span>
+                <p>0</p>
+              </a>
+            </li>
+            </span>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
