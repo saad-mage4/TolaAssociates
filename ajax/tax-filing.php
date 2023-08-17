@@ -136,6 +136,11 @@
     </div>
     <div class="sec-2 d-none">
         <div class="row income-section">
+            <div class="col-12">
+                <ul class="list-images d-flex justify-content-center align-items-center list-unstyled">
+
+                </ul>
+            </div>
             <div class="col-12 text-center mb-3">
                 <h3>Now let's start <strong>Looking at your Income</strong></h3>
                 <p class="text-muted">Select the sources of your income, you can select more than one if applicable</p>
@@ -143,7 +148,7 @@
             <div class="col-lg-8 mx-auto">
                 <div class="grid-boxes no-gap">
 
-                    <a href="#!">
+                    <a href="#!" data-img="img/salary.png">
                         <div class="box">
                             <div class="logo p-3">
                                 <img class="image-xs" src="img/salary.png" alt="logo_img">
@@ -151,7 +156,7 @@
                             <h4>Salary</h4>
                         </div>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/business.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/business.png" alt="logo_img">
@@ -160,7 +165,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/freelancer.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/freelancer.png" alt="logo_img">
@@ -169,7 +174,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/professional.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/professional.png" alt="logo_img">
@@ -178,7 +183,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/pensioner.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/pensioner.png" alt="logo_img">
@@ -187,7 +192,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/agriculture.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/agriculture.png" alt="logo_img">
@@ -196,7 +201,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/commission.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/commission.png" alt="logo_img">
@@ -205,7 +210,7 @@
                             </div>
                         </a>
 
-                        <a href="#!">
+                        <a href="#!" data-img="img/aop.png">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/aop.png" alt="logo_img">
@@ -277,6 +282,22 @@
             e.preventDefault();
             $('.sec-2').addClass('d-none');
             $('.sec-1').removeClass('d-none');
+        });
+
+        $('.grid-boxes.no-gap').on('click', 'a', function(e) {
+            e.preventDefault();
+            let img = $(this).data('img');
+            $(this).addClass('gray-scale');
+            let index = $(this).index() + 1;
+            if ($(this).hasClass('added')) {
+                $(`.list-images li[id="image-${index}"]`).remove();
+                $(this).removeClass('added');
+                $(this).removeClass('gray-scale');
+            } else {
+                $(this).addClass('gray-scale');
+                $(this).addClass('added');
+                $('.list-images').append(`<li id="image-${index}" class="mr-3"><img src="${img}" class="image-xs" alt="img-${index}"/></li>`);
+            }
         });
 
     });
