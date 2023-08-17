@@ -147,7 +147,7 @@
             <div class="col-lg-8 mx-auto">
                 <div class="grid-boxes no-gap">
 
-                    <a href="#!" data-img="img/salary.png">
+                    <a href="#!" data-img="img/salary.png" data-val="salary" data-toggle="tooltip" data-placement="top" title="Any income received from employment">
                         <div class="box">
                             <div class="logo p-3">
                                 <img class="image-xs" src="img/salary.png" alt="logo_img">
@@ -155,7 +155,7 @@
                             <h4>Salary</h4>
                         </div>
 
-                        <a href="#!" data-img="img/business.png">
+                        <a href="#!" data-img="img/business.png" data-val="business">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/business.png" alt="logo_img">
@@ -224,7 +224,7 @@
                 <button class="btn font-weight-bold btn-primary btn-stepBack-1">back</button>
             </div>
             <div class="col-lg-6 text-right mb-5">
-                <button class="btn font-weight-bold btn-danger disabled btn-step-2">Continue</button>
+                <button class="btn font-weight-bold btn-danger disabled btn-step-3" data-value="">Continue</button>
             </div>
         </div>
     </div>
@@ -286,16 +286,19 @@
         $('.grid-boxes.no-gap').on('click', 'a', function(e) {
             e.preventDefault();
             let img = $(this).data('img');
+            let value = $(this).data('val');
+            // console.log(value);
             $(this).addClass('gray-scale');
             let index = $(this).index() + 1;
-            $('.btn-step-2').removeClass('disabled');
+            $('.sec-2 .btn-step-3').removeClass('disabled');
+            $('.sec-2 .btn-step-3').data("value", value);
             if ($(this).hasClass('added')) {
                 $(`.list-images li[id="image-${index}"]`).remove();
                 $(this).removeClass('added');
                 $(this).removeClass('gray-scale');
                 if ($('.list-images').children().length == 0) {
                     $('.list-images').removeClass('active');
-                    $('.btn-step-2').addClass('disabled');
+                    $('.sec-2 .btn-step-3').addClass('disabled');
                 }
             } else {
                 $('.list-images').addClass('active');
@@ -303,6 +306,11 @@
                 $(this).addClass('added');
                 $('.list-images').append(`<li id="image-${index}" class="mr-3"><img src="${img}" class="image-xs" alt="img-${index}"/></li>`);
             }
+        });
+
+        $('.sec-2').on('click', '.btn-step-3', function(e){
+            e.preventDefault();
+            console.log($(this).data('value'));
         });
 
     });
