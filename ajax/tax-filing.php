@@ -138,7 +138,6 @@
         <div class="row income-section">
             <div class="col-12">
                 <ul class="list-images d-flex justify-content-center align-items-center list-unstyled">
-
                 </ul>
             </div>
             <div class="col-12 text-center mb-3">
@@ -293,7 +292,11 @@
                 $(`.list-images li[id="image-${index}"]`).remove();
                 $(this).removeClass('added');
                 $(this).removeClass('gray-scale');
+                if ($('.list-images').children().length == 0) {
+                    $('.list-images').removeClass('active');
+                }
             } else {
+                $('.list-images').addClass('active');
                 $(this).addClass('gray-scale');
                 $(this).addClass('added');
                 $('.list-images').append(`<li id="image-${index}" class="mr-3"><img src="${img}" class="image-xs" alt="img-${index}"/></li>`);
