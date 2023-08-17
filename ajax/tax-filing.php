@@ -224,7 +224,7 @@
                 <button class="btn font-weight-bold btn-primary btn-stepBack-1">back</button>
             </div>
             <div class="col-lg-6 text-right mb-5">
-                <button class="btn font-weight-bold btn-danger btn-step-2">Continue</button>
+                <button class="btn font-weight-bold btn-danger disabled btn-step-2">Continue</button>
             </div>
         </div>
     </div>
@@ -288,12 +288,14 @@
             let img = $(this).data('img');
             $(this).addClass('gray-scale');
             let index = $(this).index() + 1;
+            $('.btn-step-2').removeClass('disabled');
             if ($(this).hasClass('added')) {
                 $(`.list-images li[id="image-${index}"]`).remove();
                 $(this).removeClass('added');
                 $(this).removeClass('gray-scale');
                 if ($('.list-images').children().length == 0) {
                     $('.list-images').removeClass('active');
+                    $('.btn-step-2').addClass('disabled');
                 }
             } else {
                 $('.list-images').addClass('active');
