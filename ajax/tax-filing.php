@@ -141,6 +141,8 @@
                 </ul>
             </div>
             <div class="col-12 text-center mb-3">
+                <input type="hidden" name="incomes" value="">
+
                 <h3>Now let's start <strong>Looking at your Income</strong></h3>
                 <p class="text-muted">Select the sources of your income, you can select more than one if applicable</p>
             </div>
@@ -164,7 +166,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/freelancer.png">
+                        <a href="#!" data-img="img/freelancer.png" data-val="freelancer">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/freelancer.png" alt="logo_img">
@@ -173,7 +175,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/professional.png">
+                        <a href="#!" data-img="img/professional.png" data-val="professional">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/professional.png" alt="logo_img">
@@ -182,7 +184,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/pensioner.png">
+                        <a href="#!" data-img="img/pensioner.png" data-val="pensioner">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/pensioner.png" alt="logo_img">
@@ -191,7 +193,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/agriculture.png">
+                        <a href="#!" data-img="img/agriculture.png" data-val="agriculture">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/agriculture.png" alt="logo_img">
@@ -200,7 +202,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/commission.png">
+                        <a href="#!" data-img="img/commission.png" data-val="commission">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/commission.png" alt="logo_img">
@@ -209,7 +211,7 @@
                             </div>
                         </a>
 
-                        <a href="#!" data-img="img/aop.png">
+                        <a href="#!" data-img="img/aop.png" data-val="aop">
                             <div class="box">
                                 <div class="logo p-3">
                                     <img class="image-xs" src="img/aop.png" alt="logo_img">
@@ -224,7 +226,7 @@
                 <button class="btn font-weight-bold btn-primary btn-stepBack-1">back</button>
             </div>
             <div class="col-lg-6 text-right mb-5">
-                <button class="btn font-weight-bold btn-danger disabled btn-step-3" data-value="">Continue</button>
+                <button class="btn font-weight-bold btn-danger disabled btn-step-3" style="pointer-events: none;" data-value="">Continue</button>
             </div>
         </div>
     </div>
@@ -290,27 +292,47 @@
             // console.log(value);
             $(this).addClass('gray-scale');
             let index = $(this).index() + 1;
-            $('.sec-2 .btn-step-3').removeClass('disabled');
+            $('.sec-2 .btn-step-3').removeClass('disabled').removeAttr('style');
             $('.sec-2 .btn-step-3').data("value", value);
+            var incomeVal = $(this).data('val');
+            $('input[name="incomes"]').val(function() {
+                return this.value + incomeVal + ',';
+            });
             if ($(this).hasClass('added')) {
                 $(`.list-images li[id="image-${index}"]`).remove();
                 $(this).removeClass('added');
                 $(this).removeClass('gray-scale');
+
                 if ($('.list-images').children().length == 0) {
                     $('.list-images').removeClass('active');
-                    $('.sec-2 .btn-step-3').addClass('disabled');
+                    $('.sec-2 .btn-step-3').addClass('disabled').css('pointer-events', 'none');
                 }
             } else {
                 $('.list-images').addClass('active');
                 $(this).addClass('gray-scale');
                 $(this).addClass('added');
-                $('.list-images').append(`<li id="image-${index}" class="mr-3"><img src="${img}" class="image-xs" alt="img-${index}"/></li>`);
+                $('.list-images').append(`<li data-vall="${value}" id="image-${index}" class="mr-3"><img src="${img}" class="image-xs" alt="img-${index}"/></li>`);
             }
         });
 
-        $('.sec-2').on('click', '.btn-step-3', function(e){
+        $('.list-images').on('click', 'li', function(e) {
             e.preventDefault();
-            console.log($(this).data('value'));
+            let incomeVal = $(this).data('vall');
+            $(`.grid-boxes.no-gap a[data-val="${incomeVal}"]`).removeClass('gray-scale added');
+            let newVal = $('input[name="incomes"]').val().replace(`${incomeVal},`, "");
+            $('input[name="incomes"]').val(newVal);
+            $(this).remove();
+            if ($('.list-images').children().length == 0) {
+                $('.list-images').removeClass('active');
+                $('.sec-2 .btn-step-3').addClass('disabled').css('pointer-events', 'none');
+            }
+        });
+
+        $('.sec-2').on('click', '.btn-step-3', function(e) {
+            e.preventDefault();
+            let values = $('input[name="incomes"]').val();
+            values = values.replace(/,\s*$/, "");
+            console.log(values);
         });
 
     });

@@ -145,6 +145,11 @@ body {
     &.no-gap {
       gap: 0;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      a {
+        &.added {
+          pointer-events: none;
+        }
+      }
     }
   }
 
@@ -257,8 +262,32 @@ body {
   }
   .list-images {
     height: 0;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     overflow: hidden;
+    li {
+      position: relative;
+      &::before {
+        content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        color: red;
+        font-size: 18px;
+        bottom: auto;
+        z-index: 1;
+        width: 25px;
+        height: 25px;
+        display: block;
+        background-color: #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -5px;
+        // transform: translate(-50%, -50%);
+        right: -10px;
+      }
+    }
     &.active {
       height: 60px;
     }
